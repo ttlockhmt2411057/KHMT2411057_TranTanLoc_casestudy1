@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'splash_screen.dart';
+import 'dashboard_screen.dart';
+import 'transaction_list_screen.dart';
+import 'add_transaction_screen.dart';
+import 'edit_transaction_screen.dart';
+import 'statistics_screen.dart';
+import 'profile_screen.dart';
+import 'filter_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+<<<<<<< Updated upstream
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -117,6 +126,20 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
+=======
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/dashboard': (context) => DashboardScreen(),
+        '/transaction_list': (context) => TransactionListScreen(),
+        '/add_transaction': (context) => const AddTransactionScreen(),
+        '/edit_transaction': (context) => const EditTransactionScreen(),
+        '/statistics': (context) => const StatisticsScreen(),
+        '/profile': (context) => const ProfileScreen(),
+        '/filter': (context) => const FilterScreen(),
+      },
+>>>>>>> Stashed changes
     );
   }
 }
